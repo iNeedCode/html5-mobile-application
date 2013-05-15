@@ -1,14 +1,51 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Ijtema</title>
+    <meta http-equiv="x-ua-compatible" content="IE=edge" />
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-touch-fullscreen" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+<title>Ijtema</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
+
 </head>
 <body>
-
-<%= yield %>
-
+        <div class="snap-drawers">
+            <div class="snap-drawer snap-drawer-left">
+                <div>
+                    <h3>Ijtema</h3>
+                    <div class="demo-social">
+                        <p>social media</p>
+                    </div>
+                    <h4>Demos</h4>
+                    <ul>
+                        <li><a href="#">Programm</a></li>
+                        <li><a href="#">Atfal</a></li>
+                        <li><a href="#">Meine Region</a></li>
+                        <li><a href="default1.html">Sport</a></li>
+                        <li><a href="#">Fu&szlig;ball</a></li>
+                        <li><a href="#">Cricket</a></li>
+                        <li><a href="http://google.de">About</a></li>
+                    </ul>
+                    <div>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="snap-drawer snap-drawer-right"></div>
+        </div>
+        
+        <div id="content" class="snap-content">
+            <div id="toolbar">
+                <a href="#" id="open-left"></a>
+                <h1>Header</h1>
+            </div>
+        
+        <%= yield %>
+        </div>
+        
 </body>
 </html>
