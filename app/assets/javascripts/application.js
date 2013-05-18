@@ -14,8 +14,14 @@
 //= require jquery_ujs
 //= require_tree .
 
+
+
+
+
 // ------- Snap js Function
 $(document).ready(function() {
+
+
     var snapper = new Snap({
         element: document.getElementById('content'),
         disable: 'right'
@@ -33,4 +39,13 @@ $(document).ready(function() {
         snapper.open('left');
     });
 
+
+// -- height alignment for the snap js and for the hiding of the address bar
+$(".snap-content").height(screen.height);
+$(".snap-drawers").height(screen.height + 65);
+
 });
+
+
+
+
