@@ -12,16 +12,17 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require flat-ui
 //= require_tree .
 
 
 
 
 
-// ------- Snap js Function
 $(document).ready(function() {
 
 
+    // ---- Snap js Function
     var snapper = new Snap({
         element: document.getElementById('content'),
         disable: 'right'
@@ -40,9 +41,9 @@ $(document).ready(function() {
     });
 
 
-// -- height alignment for the snap js and for the hiding of the address bar
-$(".snap-content").height(screen.height);
-$(".snap-drawers").height(screen.height + 65);
+    // ---- height alignment for the snap js and for the hiding of the address bar
+    $(".snap-content").height(screen.height);
+    $(".snap-drawers").height(screen.height  + 65);
 
 });
 
