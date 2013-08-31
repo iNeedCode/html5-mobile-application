@@ -13,6 +13,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require flat-ui
+//= require moment
 //= require_tree .
 
 
@@ -20,6 +21,7 @@
 
 
 $(document).ready(function() {
+    window.mySwipe = Swipe(document.getElementById('slider'));
 
 
     // ---- Snap js Function
