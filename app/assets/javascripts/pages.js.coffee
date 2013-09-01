@@ -23,7 +23,7 @@ $ ->
 				country = cache.data.city.country
 				$.each cache.data.list, ->
 					localTime = new Date(@dt * 1000 - offset)
-					addWeather @weather[0].icon, moment(localTime).calendar(), @weather[0].description + " <b>" + @main.temp_min + "°" + DEG + " / " + @main.temp_max + "°" + DEG + "</b>"
+					addWeather @weather[0].icon, moment(localTime).calendar(), @weather[0].description + "<br><b>" + @main.temp_min + "°" + DEG + " / " + @main.temp_max + "°" + DEG + "</b>"
 				location.html city
 			else
 				weatherAPI = 'http://api.openweathermap.org/data/2.5/forecast?id=2847602&callback=?&units=metric&lang=de&APPID=e63c706730038c42aa955ed5551dc9d2'
