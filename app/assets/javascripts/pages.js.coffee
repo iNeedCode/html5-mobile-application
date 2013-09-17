@@ -21,6 +21,7 @@ $ ->
 				offset = d.getTimezoneOffset() * 60 * 1000
 				city = cache.data.city.name
 				country = cache.data.city.country
+
 				$.each cache.data.list, ->
 					localTime = new Date(@dt * 1000 - offset)
 					addWeather @weather[0].icon, moment(localTime).calendar(), @weather[0].description + "<br><b>" + @main.temp_min + "°" + DEG + " / " + @main.temp_max + "°" + DEG + "</b>"
@@ -43,7 +44,6 @@ $ ->
 			window.console and console.error(e)
 
 	addWeather = (icon, day, condition) ->
-		#console.log "<li>" + "<img src=\"assets/icons/" + icon + ".png\" />" + " <p class=\"day\">" + day + "</p> <p class=\"cond\">" + condition + "</p></li>"
 		markup = "<li>" + "<img src=\"assets/icons/" + icon + ".png\" />" + " <p class=\"day\">" + day + "</p> <p class=\"cond\">" + condition + "</p></li>"
 		scroller.append markup
 
@@ -84,8 +84,10 @@ $ ->
 		switch e.keyCode
 			when 37
 				weatherDiv.find("a.previous").click()
+				console.log "<--"
 			when 39
 				weatherDiv.find("a.next").click()
+				console.log "-->"
 
 
 	# Handling the previous / next arrows 

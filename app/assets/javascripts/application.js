@@ -18,37 +18,3 @@
 
 
 
-
-
-$(document).ready(function() {
-    window.mySwipe = Swipe(document.getElementById('slider'));
-
-
-    // ---- Snap js Function
-    var snapper = new Snap({
-        element: document.getElementById('content'),
-        disable: 'right'
-    });
-
-    var addEvent = function addEvent(element, eventName, func) {
-    if (element.addEventListener) {
-        return element.addEventListener(eventName, func, false);
-    } else if (element.attachEvent) {
-        return element.attachEvent("on" + eventName, func);
-    }
-    };
-
-    addEvent(document.getElementById('open-left'), 'click', function(){
-        snapper.open('left');
-    });
-
-
-    // ---- height alignment for the snap js and for the hiding of the address bar
-    $(".snap-content").height(screen.height);
-    $(".snap-drawers").height(screen.height  + 65);
-
-});
-
-
-
-
