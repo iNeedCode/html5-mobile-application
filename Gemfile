@@ -23,6 +23,7 @@ end
 gem 'jquery-rails'
 gem 'flatui-rails'
 gem 'momentjs-rails'
+gem 'devise'
 
 
 # To use ActiveModel has_secure_password

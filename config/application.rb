@@ -58,5 +58,10 @@ module Ijtema
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
+
+    # Manually added
+    # Devise
+    # If you are deploying on Heroku with Rails 3.2 only, you may want to set:
+    config.assets.initialize_on_precompile = false
   end
 end
