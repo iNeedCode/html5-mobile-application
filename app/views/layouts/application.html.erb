@@ -7,7 +7,7 @@
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
 
-    <title>Ijtema</title>
+    <title>Ijtema App</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
@@ -17,7 +17,7 @@
         <div class="snap-drawers">
             <div class="snap-drawer snap-drawer-left">
                 <div>
-                    <h3>Ijtema</h3>
+                    <h3><%= link_to 'Ijtema', root_url %></h3>
                     <div class="demo-social">
                         <p>social media</p>
                     </div>
@@ -45,8 +45,8 @@
                 <h1><%= @header || "Ijtema 2013" %></h1>
             </div>
         
-        <p class="notice"><%= notice %></p>
-        <p class="alert"><%= alert %></p>
+<!--         <p class="notice"><%= notice %></p>
+        <p class="alert"><%= alert %></p> -->
         <%= yield %>
         </div>
         
