@@ -2,7 +2,7 @@
 ---
 Beta verison
 
-* [Flat-ui Demo](http://designmodo.com/demo/flat)
+* [Flat-ui Demo](http://designmodo.com/demo/flat-ui/)
 
 
 ---
