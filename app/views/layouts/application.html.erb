@@ -7,6 +7,24 @@
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
 
+    <!-- For iPad with high-resolution Retina display running iOS ≥ 7: -->
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="/assets/images/favicon/favicon-152.png">
+
+<!-- For iPad with high-resolution Retina display running iOS ≤ 6: -->
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/assets/images/favicon/favicon-144.png">
+
+<!-- For iPhone with high-resolution Retina display running iOS ≥ 7: -->
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="/assets/images/favicon/favicon-120.png">
+
+<!-- For iPhone with high-resolution Retina display running iOS ≤ 6: -->
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/assets/images/favicon/favicon-114.png">
+
+<!-- For first- and second-generation iPad: -->
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/assets/images/favicon/favicon-72.png">
+
+<!-- For non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
+<link rel="apple-touch-icon-precomposed" href="/assets/images/favicon/favicon-57.png">
+
     <title>Ijtema App</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
@@ -17,7 +35,7 @@
         <div class="snap-drawers">
             <div class="snap-drawer snap-drawer-left">
                 <div>
-                    <h3><%= link_to 'Ijtema', root_url %></h3>
+                    <h3><%= link_to 'Ijtema', root_url, class: "text-success" %></h3>
                     <div class="demo-social">
                         <p>social media</p>
                     </div>

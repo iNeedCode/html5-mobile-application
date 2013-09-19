@@ -1,3 +1,5 @@
+<% @header = "Spieler" %>
+
 <p id="notice"><%= notice %></p>
 
 <p>
@@ -16,5 +18,5 @@
 </p>
 
 
-<%= link_to 'Edit', edit_player_path(@player) %> |
-<%= link_to 'Back', players_path %>
+<%= link_to 'Edit', edit_player_path(@player), class: "btn btn-primary" %> 
+<%= link_to 'Back', players_path, class: "btn btn-primary" %>

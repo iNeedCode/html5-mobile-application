@@ -1,6 +1,6 @@
-<h1>Editing player</h1>
+<% @header = "Spieler bearbeiten" %>
 
 <%= render 'form' %>
 
-<%= link_to 'Show', @player %> |
-<%= link_to 'Back', players_path %>
+<%= link_to 'Show', @player, class: "btn" %>
+<%= link_to 'Back', players_path, class: "btn" %>
