@@ -13,6 +13,10 @@
   </thead>
 
 <% @players.each do |player| %>
+  <% if @regions.include?(player.region) %>
+    <tr class="success"><td colspan="5">Region: <strong><%= player.region %></strong></td></tr>
+    <% @regions.delete(player.region) -%>
+  <% end -%>
   <tr>
     <td><%= player.name %></td>
     <td><%= player.zone %></td>

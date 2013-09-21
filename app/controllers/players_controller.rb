@@ -1,8 +1,10 @@
+# -*- coding: utf-8 -*-
 class PlayersController < ApplicationController
   # GET /players
   # GET /players.json
   def index
     @players = Player.all
+    @regions = ["Mitte", "Süd", "Nord"]
 
     respond_to do |format|
       format.html # index.html.erb
