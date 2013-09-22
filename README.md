@@ -2,7 +2,8 @@
 ---
 Beta verison
 
-* [Flat-ui Demo](http://designmodo.com/demo/flat-ui/)
+* [datepicker](https://github.com/anjlab/anjlab-widgets)
+* [Twitter Bootstrap v3.0.0 for Rails 3](https://github.com/anjlab/bootstrap-rails)
 
 
 ---
