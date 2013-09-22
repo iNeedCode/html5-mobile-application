@@ -12,8 +12,8 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require flat-ui
 //= require moment
+//= require twitter/bootstrap
 //= require_tree .
 
 

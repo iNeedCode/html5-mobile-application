@@ -21,7 +21,8 @@ group :assets do
 end
 
 gem 'jquery-rails'
-gem 'flatui-rails'
+# gem 'flatui-rails'
+gem 'anjlab-bootstrap-rails', '>= 3.0.0.0', :require => 'bootstrap-rails'
 gem 'momentjs-rails'
 gem 'devise'
 
