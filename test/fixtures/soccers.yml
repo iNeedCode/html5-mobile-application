@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  team_a: MyString
+  team_b: MyString
+  round: MyString
+  group: MyString
+  place: MyString
+  duration: 1
+  startime: 2013-09-22 16:07:40
+  endtime: 2013-09-22 16:07:40
+
+two:
+  team_a: MyString
+  team_b: MyString
+  round: MyString
+  group: MyString
+  place: MyString
+  duration: 1
+  startime: 2013-09-22 16:07:40
+  endtime: 2013-09-22 16:07:40

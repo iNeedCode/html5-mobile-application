@@ -1,0 +1,49 @@
+<%= form_for(@soccer) do |f| %>
+  <% if @soccer.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@soccer.errors.count, "error") %> prohibited this soccer from being saved:</h2>
+
+      <ul>
+      <% @soccer.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :team_a %><br />
+    <%= f.text_field :team_a %>
+  </div>
+  <div class="field">
+    <%= f.label :team_b %><br />
+    <%= f.text_field :team_b %>
+  </div>
+  <div class="field">
+    <%= f.label :round %><br />
+    <%= f.text_field :round %>
+  </div>
+  <div class="field">
+    <%= f.label :group %><br />
+    <%= f.text_field :group %>
+  </div>
+  <div class="field">
+    <%= f.label :place %><br />
+    <%= f.text_field :place %>
+  </div>
+  <div class="field">
+    <%= f.label :duration %><br />
+    <%= f.number_field :duration %>
+  </div>
+  <div class="field">
+    <%= f.label :startime %><br />
+    <%= f.datetime_select :startime %>
+  </div>
+  <div class="field">
+    <%= f.label :endtime %><br />
+    <%= f.datetime_select :endtime %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

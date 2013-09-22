@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Team a:</b>
+  <%= @soccer.team_a %>
+</p>
+
+<p>
+  <b>Team b:</b>
+  <%= @soccer.team_b %>
+</p>
+
+<p>
+  <b>Round:</b>
+  <%= @soccer.round %>
+</p>
+
+<p>
+  <b>Group:</b>
+  <%= @soccer.group %>
+</p>
+
+<p>
+  <b>Place:</b>
+  <%= @soccer.place %>
+</p>
+
+<p>
+  <b>Duration:</b>
+  <%= @soccer.duration %>
+</p>
+
+<p>
+  <b>Startime:</b>
+  <%= @soccer.startime %>
+</p>
+
+<p>
+  <b>Endtime:</b>
+  <%= @soccer.endtime %>
+</p>
+
+
+<%= link_to 'Edit', edit_soccer_path(@soccer) %> |
+<%= link_to 'Back', soccers_path %>
