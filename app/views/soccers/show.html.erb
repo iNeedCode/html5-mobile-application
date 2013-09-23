@@ -1,12 +1,10 @@
+<% @header = "Spiel #{@soccer.team_a} vs. #{@soccer.team_b}" %>
+
 <p id="notice"><%= notice %></p>
 
 <p>
-  <b>Team a:</b>
-  <%= @soccer.team_a %>
-</p>
-
-<p>
-  <b>Team b:</b>
+  <b>Spiel: </b>
+  <%= @soccer.team_a %> vs.
   <%= @soccer.team_b %>
 </p>
 
@@ -26,20 +24,13 @@
 </p>
 
 <p>
-  <b>Duration:</b>
+  <b>Beginn</b>
+  <%= @soccer.startime.strftime("%d.%m.%Y - %H:%M") %> <br>
+  <b>Spieldauer:</b>
   <%= @soccer.duration %>
 </p>
 
-<p>
-  <b>Startime:</b>
-  <%= @soccer.startime %>
-</p>
-
-<p>
-  <b>Endtime:</b>
-  <%= @soccer.endtime %>
-</p>
 
 
-<%= link_to 'Edit', edit_soccer_path(@soccer) %> |
-<%= link_to 'Back', soccers_path %>
+<%= link_to 'Edit', edit_soccer_path(@soccer), class: "btn btn-default" %>
+<%= link_to 'Back', soccers_path, class: "btn btn-default" %>

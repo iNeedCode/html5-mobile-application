@@ -3,8 +3,7 @@ class PlayersController < ApplicationController
   # GET /players
   # GET /players.json
   def index
-    @players = Player.all
-    @regions = ["Mitte", "Süd", "Nord"]
+    @players = Player.order("region ASC, zone ASC").all
 
     respond_to do |format|
       format.html # index.html.erb

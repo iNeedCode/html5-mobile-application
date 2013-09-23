@@ -2,7 +2,7 @@ class SoccersController < ApplicationController
   # GET /soccers
   # GET /soccers.json
   def index
-    @soccers = Soccer.all
+    @soccers = Soccer.order("startime ASC").all
 
     respond_to do |format|
       format.html # index.html.erb
@@ -24,7 +24,7 @@ class SoccersController < ApplicationController
   # GET /soccers/new
   # GET /soccers/new.json
   def new
-    @soccer = Soccer.new
+    @soccer = Soccer.new(duration: 20)
 
     respond_to do |format|
       format.html # new.html.erb
@@ -41,6 +41,7 @@ class SoccersController < ApplicationController
   # POST /soccers.json
   def create
     @soccer = Soccer.new(params[:soccer])
+    @soccer.endtime =  @soccer.startime +  @soccer.duration*60
 
     respond_to do |format|
       if @soccer.save
@@ -57,6 +58,7 @@ class SoccersController < ApplicationController
   # PUT /soccers/1.json
   def update
     @soccer = Soccer.find(params[:id])
+    @soccer.endtime =  @soccer.startime +  @soccer.duration*60
 
     respond_to do |format|
       if @soccer.update_attributes(params[:soccer])

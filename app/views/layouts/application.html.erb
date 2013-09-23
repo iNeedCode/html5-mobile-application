@@ -39,18 +39,23 @@
                 <div>
                     <h3><%= link_to 'Ijtema', root_url, class: "text-success" %></h3>
                     <div class="demo-social">
-                        <p>social media</p>
+                        <span><%= link_to(image_tag("youtube_logo.png", height: '32'), "http://youtube.de") %></span>
+                        <span><%= link_to(image_tag("twitter_logo.png", height: '32'), "http://twitter.com") %></span>
                     </div>
-                    <h4>Demos</h4>
+                    <h4>Programmübersicht</h4>
+                    <h4>Atfal-ul-Ahmadiyya</h4>
+                    <h4>Wissenswettbewerbe</h4>
+                    <h4>Sport</h4>
                     <ul>
-                        <li><a href="#">Programm</a></li>
-                        <li><a href="#">Atfal</a></li>
-                        <li><a href="#">Meine Region</a></li>
-                        <li><a href="default1.html">Sport</a></li>
-                        <li><a href="#">Fu&szlig;ball</a></li>
+                        <li><%= link_to 'Fußball', soccers_path%></li>
                         <li><a href="#">Cricket</a></li>
-                        <li><a href="https://www.xing.com/profile/Akhlaq_Malik">About</a></li>
+                        <li><a href="#">Meine Region</a></li>
                     </ul>
+                    <h4>About</h4>
+                    <ul>
+                        <li><a href="#">Feedback</a></li>
+                    </ul>
+
                     <div>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                     </div>

@@ -1,6 +1,6 @@
-<h1>Editing soccer</h1>
+<% @header = "Spiel bearbeiten" %>
 
 <%= render 'form' %>
 
-<%= link_to 'Show', @soccer %> |
-<%= link_to 'Back', soccers_path %>
+<%= link_to 'Show', @soccer, class: "btn btn-default" %>
+<%= link_to 'Back', soccers_path, class: "btn btn-default" %>

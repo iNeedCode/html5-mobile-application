@@ -12,38 +12,33 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :team_a %><br />
-    <%= f.text_field :team_a %>
-  </div>
-  <div class="field">
-    <%= f.label :team_b %><br />
-    <%= f.text_field :team_b %>
+    
+    <%= f.text_field :team_a, placeholder: "Mannschaft A" %> vs.
+    <%= f.text_field :team_b, placeholder: "Mannschaft B" %>
   </div>
   <div class="field">
     <%= f.label :round %><br />
-    <%= f.text_field :round %>
+    <%= f.select :round, soccer_rounds, selected: @soccer.round, :prompt => "Runde auswählen" %>
   </div>
   <div class="field">
-    <%= f.label :group %><br />
+    <%= f.label :group ,"Gruppe" %><br />
     <%= f.text_field :group %>
   </div>
   <div class="field">
-    <%= f.label :place %><br />
-    <%= f.text_field :place %>
+    <%= f.label :place, "Platz" %><br />
+    <%= f.select :place, available_places, selected: @soccer.place, :prompt => "Platz auswählen" %>
+
   </div>
   <div class="field">
     <%= f.label :duration %><br />
     <%= f.number_field :duration %>
   </div>
   <div class="field">
-    <%= f.label :startime %><br />
+    <%= f.label :startime, "Spielbeginn" %><br />
     <%= f.datetime_select :startime %>
   </div>
-  <div class="field">
-    <%= f.label :endtime %><br />
-    <%= f.datetime_select :endtime %>
-  </div>
+
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit 'Sichern', class: "btn btn-primary" %>
   </div>
 <% end %>

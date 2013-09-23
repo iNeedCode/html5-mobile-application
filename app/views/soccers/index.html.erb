@@ -1,37 +1,47 @@
-<h1>Listing soccers</h1>
+<% @header = "Alle Fußballspiele" %>
 
-<table>
-  <tr>
-    <th>Team a</th>
-    <th>Team b</th>
-    <th>Round</th>
-    <th>Group</th>
-    <th>Place</th>
-    <th>Duration</th>
-    <th>Startime</th>
-    <th>Endtime</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+<% if current_user -%>
+    <%= link_to 'Spiel eintragen', new_soccer_path, class: "btn btn-large btn-primary btn-block" %><br>
+<% end -%>
+<div class="table-responsve">
 
-<% @soccers.each do |soccer| %>
-  <tr>
-    <td><%= soccer.team_a %></td>
-    <td><%= soccer.team_b %></td>
-    <td><%= soccer.round %></td>
-    <td><%= soccer.group %></td>
-    <td><%= soccer.place %></td>
-    <td><%= soccer.duration %></td>
-    <td><%= soccer.startime %></td>
-    <td><%= soccer.endtime %></td>
-    <td><%= link_to 'Show', soccer %></td>
-    <td><%= link_to 'Edit', edit_soccer_path(soccer) %></td>
-    <td><%= link_to 'Destroy', soccer, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
+<% for i in 0...@soccers.size %>
+<% _cur = @soccers[i] %>
+<% _prev = @soccers[i-1] || @soccers.first %>
+<% _next = @soccers[i+1] || @soccers.last %>
+
+	<% unless _cur.startime.strftime("%d.%m.%Y")==_prev.startime.strftime("%d.%m.%Y") and _cur.round == _prev.round -%>
+		<table class="table table-bordered">
+			<strong><%= _cur.startime.strftime("%d.%m.%Y") %> - <%= _cur.round %></strong>
+			<tr class="active"><th>Uhrzeit<th>Manschaft</th><th>Stand</th><th>Platz</th>
+				<% if current_user -%><th></th><th></th><th></th><% end -%>
+			</tr>
+	<% end -%>
+
+			<tr>
+				<td rowspan="2" style="text-align:center; width: 50px; ">
+					<%= _cur.startime.strftime("%H:%M") %> - 
+					<%= _cur.endtime.strftime("%H:%M") %>
+				</td>
+				<td><%= _cur.team_a %></td>
+				<td>Erg1</td>
+				<td rowspan="2" style="text-align:center; vertical-align:middle;"><%= _cur.place %></td>
+				<% if current_user -%>
+					<td rowspan="2" style="text-align:center; vertical-align:middle;"><%= link_to 'Show', _cur, class: "label label-info" %></td>
+					<td rowspan="2" style="text-align:center; vertical-align:middle;"><%= link_to 'edi', edit_soccer_path(_cur), class: "label label-info" %></td>
+					<td rowspan="2" style="text-align:center; vertical-align:middle;"><%= link_to 'del', _cur, method: :delete, data: { confirm: 'Are you sure?' }, class: "label label-danger" %></td>
+				<% end -%>
+			</tr>
+
+			<tr>
+				<td><%= _cur.team_b %></td>
+				<td>Erg2</td>
+
+			</tr>
+
+    		<% unless _cur.startime.strftime("%d.%m.%Y")==_next.startime.strftime("%d.%m.%Y") and _cur.round == _next.round  -%>
+				</table>
+			<% end -%>
+
 <% end %>
-</table>
-
-<br />
-
-<%= link_to 'New Soccer', new_soccer_path %>
+</div>

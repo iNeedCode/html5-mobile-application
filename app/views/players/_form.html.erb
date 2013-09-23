@@ -21,7 +21,7 @@
   </div>
   <div class="field">
     <%= f.label :region %>
-    <%= f.text_field :region %>
+    <%= f.select :region, all_regions, selected: @player.region, :prompt => "-- Region auswählen --" %>
   </div>
   <div class="actions">
     <%= f.submit 'Sichern', class: "btn btn-primary" %>
