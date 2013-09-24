@@ -17,25 +17,25 @@
     <%= f.text_field :team_b, placeholder: "Mannschaft B" %>
   </div>
   <div class="field">
-    <%= f.label :round %><br />
+    <%= f.label :round %>
     <%= f.select :round, soccer_rounds, selected: @soccer.round, :prompt => "Runde auswählen" %>
   </div>
   <div class="field">
-    <%= f.label :group ,"Gruppe" %><br />
-    <%= f.text_field :group %>
+    <%= f.label :group ,"Gruppe" %>
+    <%= f.select :group, available_groups, selected: @soccer.group, prompt: "Gruppe auswählen" %>
   </div>
   <div class="field">
-    <%= f.label :place, "Platz" %><br />
+    <%= f.label :place, "Platz" %>
     <%= f.select :place, available_places, selected: @soccer.place, :prompt => "Platz auswählen" %>
 
   </div>
   <div class="field">
-    <%= f.label :duration %><br />
-    <%= f.number_field :duration %>
-  </div>
-  <div class="field">
     <%= f.label :startime, "Spielbeginn" %><br />
     <%= f.datetime_select :startime %>
+  </div>
+  <div class="field">
+    <%= f.label :duration, "Spieldauer" %>
+    <%= f.number_field :duration %>
   </div>
 
   <div class="actions">
