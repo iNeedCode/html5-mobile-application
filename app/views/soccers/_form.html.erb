@@ -12,9 +12,9 @@
   <% end %>
 
   <div class="field">
-    
-    <%= f.text_field :team_a, placeholder: "Mannschaft A" %> vs.
-    <%= f.text_field :team_b, placeholder: "Mannschaft B" %>
+    <%= f.text_field :team_a, placeholder: "Mannschaft A" %> : <%= f.text_field :result_a, placeholder: "Tore A", size: 5 %> <br />
+    <b>vs.</b><br />
+    <%= f.text_field :team_b, placeholder: "Mannschaft B" %> : <%= f.text_field :result_b, placeholder: "Tore B", size: 5 %>
   </div>
   <div class="field">
     <%= f.label :round %>

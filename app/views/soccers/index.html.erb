@@ -24,18 +24,18 @@
 					<%= _cur.endtime.strftime("%H:%M") %>
 				</td>
 				<td><%= _cur.team_a %></td>
-				<td>Erg1</td>
+				<td style="text-align:center; vertical-align:middle;"><%= _cur.result_a %></td>
 				<td rowspan="2" style="text-align:center; vertical-align:middle;"><%= _cur.place %></td>
 				<% if current_user -%>
 					<td rowspan="2" style="text-align:center; vertical-align:middle;"><%= link_to 'Show', _cur, class: "label label-info" %></td>
-					<td rowspan="2" style="text-align:center; vertical-align:middle;"><%= link_to 'edi', edit_soccer_path(_cur), class: "label label-info" %></td>
-					<td rowspan="2" style="text-align:center; vertical-align:middle;"><%= link_to 'del', _cur, method: :delete, data: { confirm: 'Are you sure?' }, class: "label label-danger" %></td>
+					<td rowspan="2" style="text-align:center; vertical-align:middle;"><%= link_to 'Edit', edit_soccer_path(_cur), class: "label label-info" %></td>
+					<td rowspan="2" style="text-align:center; vertical-align:middle;"><%= link_to 'Del', _cur, method: :delete, data: { confirm: 'Are you sure?' }, class: "label label-danger" %></td>
 				<% end -%>
 			</tr>
 
 			<tr>
 				<td><%= _cur.team_b %></td>
-				<td>Erg2</td>
+				<td style="text-align:center; vertical-align:middle;"><%= _cur.result_b %></td>
 
 			</tr>
 
