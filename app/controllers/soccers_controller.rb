@@ -58,10 +58,11 @@ class SoccersController < ApplicationController
   # PUT /soccers/1.json
   def update
     @soccer = Soccer.find(params[:id])
-    @soccer.endtime =  @soccer.startime +  @soccer.duration*60
 
     respond_to do |format|
       if @soccer.update_attributes(params[:soccer])
+         @soccer.endtime =  @soccer.startime +  @soccer.duration*60
+         @soccer.save
         format.html { redirect_to @soccer, notice: 'Soccer was successfully updated.' }
         format.json { head :no_content }
       else

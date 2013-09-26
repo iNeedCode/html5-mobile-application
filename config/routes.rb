@@ -1,9 +1,7 @@
 Ijtema::Application.routes.draw do
+  resources :crickets
   resources :soccers
-
-
   resources :players
-
 
   devise_for :users, :path => "auth", :path_names => { :sign_in => 'login', :sign_out => 'logout', :sign_up => 'register'}
 

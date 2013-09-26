@@ -1,0 +1,46 @@
+<%= form_for(@cricket) do |f| %>
+  <% if @cricket.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@cricket.errors.count, "error") %> prohibited this cricket from being saved:</h2>
+
+      <ul>
+      <% @cricket.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.text_field :team_a, placeholder: "Mannschaft A" %> : <%= f.text_field :result_a, placeholder: "Points A", size: 5 %> <br />
+    <b>vs.</b><br />
+    <%= f.text_field :team_b, placeholder: "Mannschaft B" %> : <%= f.text_field :result_b, placeholder: "Points B", size: 5 %>
+  </div>
+
+  <div class="field">
+    <%= f.label :round, "Runde" %>
+    <%= f.select :round, soccer_rounds, selected: @cricket.round, :prompt => "Runde auswählen" %>
+  </div>
+  <div class="field">
+    <%= f.label :group ,"Gruppe" %>
+    <%= f.select :group, available_groups, selected: @cricket.group, prompt: "Gruppe auswählen" %>
+  </div>
+  <div class="field">
+    <%= f.label :place, "Platz" %>
+    <%= f.select :place, available_places, selected: @cricket.place, :prompt => "Platz auswählen" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :startime, "Spielbeginn" %><br />
+    <%= f.datetime_select :startime %>
+  </div>
+
+  <div class="field">
+    <%= f.label :duration, "Spieldauer" %>
+    <%= f.number_field :duration %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit 'Sichern', class: "btn btn-primary" %>
+  </div>
+<% end %>

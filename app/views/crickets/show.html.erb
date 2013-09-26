@@ -1,0 +1,34 @@
+<% @header = "Spiel #{@cricket.team_a} vs. #{@cricket.team_b}" %>
+
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Spiel: </b>
+  <%= @cricket.team_a %> vs.
+  <%= @cricket.team_b %>
+</p>
+
+<p>
+  <b>Round:</b>
+  <%= @cricket.round %>
+</p>
+
+<p>
+  <b>Group:</b>
+  <%= @cricket.group %>
+</p>
+
+<p>
+  <b>Place:</b>
+  <%= @cricket.place %>
+</p>
+
+<p>
+  <b>Beginn</b>
+  <%= @cricket.startime.strftime("%d.%m.%Y - %H:%M") %> <br>
+  <b>Spieldauer:</b>
+  <%= @cricket.duration %>
+</p>
+
+<%= link_to 'Edit', edit_cricket_path(@cricket), class: "btn btn-default" %>
+<%= link_to 'Back', crickets_path, class: "btn btn-default" %>

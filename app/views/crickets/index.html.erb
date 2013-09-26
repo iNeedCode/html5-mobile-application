@@ -1,0 +1,46 @@
+<% @header = "Alle Cricketspiele" %>
+<p class="notice"></p>
+<% if current_user -%>
+    <%= link_to 'Cricketspiel anlegen', new_cricket_path, class: "btn btn-large btn-primary btn-block" %><br>
+<% end -%>
+<div class="table-responsve">
+
+<% for i in 0...@crickets.size %>
+<% _cur = @crickets[i] %>
+<% _prev = @crickets[i-1] || @crickets.first %>
+<% _next = @crickets[i+1] || @crickets.last %>
+
+    <% unless _cur.startime.strftime("%d.%m.%Y")==_prev.startime.strftime("%d.%m.%Y") and _cur.round == _prev.round -%>
+        <table class="table table-bordered">
+            <strong><%= _cur.startime.strftime("%d.%m.%Y") %> - <%= _cur.round %></strong>
+            <tr class="active"><th>Uhrzeit<th>Manschaft</th><th class="center">Punkte</th><th class="center">Platz</th>
+                <% if current_user -%><th></th><th></th><th></th><% end -%>
+            </tr>
+    <% end -%>
+
+            <tr>
+                <td rowspan="2" style="text-align:center; width: 50px; ">
+                    <%= _cur.startime.strftime("%H:%M") %> - 
+                    <%= _cur.endtime.strftime("%H:%M") %>
+                </td>
+                <td><%= _cur.team_a %></td>
+                <td class="center"><%= _cur.result_a %></td>
+                <td rowspan="2" class="center"><%= _cur.place %></td>
+                <% if current_user -%>
+                    <td rowspan="2" class="center"><%= link_to 'Show', _cur, class: "label label-info" %></td>
+                    <td rowspan="2" class="center"><%= link_to 'Edit', edit_cricket_path(_cur), class: "label label-info" %></td>
+                    <td rowspan="2" class="center"><%= link_to 'Del', _cur, method: :delete, data: { confirm: 'Are you sure?' }, class: "label label-danger" %></td>
+                <% end -%>
+            </tr>
+
+            <tr>
+                <td><%= _cur.team_b %></td>
+                <td class="center"><%= _cur.result_b %></td>
+
+            </tr>
+
+            <% unless _cur.startime.strftime("%d.%m.%Y")==_next.startime.strftime("%d.%m.%Y") and _cur.round == _next.round  -%>
+                </table>
+            <% end -%>
+
+<% end %>
