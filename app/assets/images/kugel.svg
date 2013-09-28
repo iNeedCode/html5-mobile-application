@@ -1,0 +1,9 @@
+<svg xmlns:x="http://ns.adobe.com/Extensibility/1.0/" xmlns:i="http://ns.adobe.com/AdobeIllustrator/10.0/" xmlns:graph="http://ns.adobe.com/Graphs/1.0/" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Your_Icon" x="0px" y="0px" width="100px" height="100px" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve">
+<switch>
+	<foreignObject requiredExtensions="http://ns.adobe.com/AdobeIllustrator/10.0/" x="0" y="0" width="1" height="1">
+		</foreignObject>
+	<g i:extraneous="self">
+		<path fill="#000000" d="M96,50c0,24.853-20.371,45-45.5,45S5,74.853,5,50S25.371,5,50.5,5S96,25.147,96,50z M63.868,13.331    c-9.864-3.415-19.325-1.953-21.132,3.265c-1.807,5.219,8.651,0.879,18.514,4.294s15.399,13.293,17.206,8.074    C80.263,23.746,73.732,16.746,63.868,13.331z"/>
+	</g>
+</switch>
+</svg>
