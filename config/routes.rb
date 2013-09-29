@@ -1,4 +1,7 @@
 Ijtema::Application.routes.draw do
+  resources :basketballs
+
+
   resources :crickets
   resources :soccers
   resources :players
@@ -7,6 +10,7 @@ Ijtema::Application.routes.draw do
 
   get "pages/home"
   get "games", to: 'pages#games'
+  get "competition", to: 'pages#competition'
 
   root :to => "pages#home"
   # The priority is based upon order of creation:

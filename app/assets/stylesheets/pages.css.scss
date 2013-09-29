@@ -1,13 +1,16 @@
 /*----------------------------
   The Games
 -----------------------------*/
+@import url(http://fonts.googleapis.com/css?family=Cookie);
+
+
 @mixin shadow {
   -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
   -moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
   box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
 }
 
-.game {
+.box {
   text-align: center;
   position: relative;
   img {
@@ -20,7 +23,6 @@
     @include shadow
   }
   span {
-    font-style: italic;
     color: #2E2E2E;
   }
 }
