@@ -28,9 +28,11 @@ end
 
 gem 'jquery-rails'
 # gem 'flatui-rails'
-gem 'anjlab-bootstrap-rails', '>= 3.0.0.0', :require => 'bootstrap-rails'
+# gem 'anjlab-bootstrap-rails', '>= 3.0.0.0', :require => 'bootstrap-rails'
 gem 'momentjs-rails'
 gem 'devise'
+gem 'anjlab-bootstrap-rails', :require => 'bootstrap-rails',
+                              :github => 'anjlab/bootstrap-rails'
 
 
 # To use ActiveModel has_secure_password
