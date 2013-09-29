@@ -33,6 +33,7 @@ gem 'momentjs-rails'
 gem 'devise'
 gem 'anjlab-bootstrap-rails', :require => 'bootstrap-rails',
                               :github => 'anjlab/bootstrap-rails'
+gem 'rails_12factor'
 
 
 # To use ActiveModel has_secure_password
