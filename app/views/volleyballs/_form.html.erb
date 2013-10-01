@@ -1,0 +1,43 @@
+<%= form_for(@volleyball) do |f| %>
+  <% if @volleyball.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@volleyball.errors.count, "error") %> prohibited this volleyball from being saved:</h2>
+
+      <ul>
+      <% @volleyball.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.text_field :team_a, placeholder: "Mannschaft A" %> : <%= f.text_field :result_a, placeholder: "Punkte A", size: 5 %> <br />
+    <b>vs.</b><br />
+    <%= f.text_field :team_b, placeholder: "Mannschaft B" %> : <%= f.text_field :result_b, placeholder: "Punkte B", size: 5 %>
+  </div>
+  <div class="field">
+    <%= f.label :round, "Gruppe" %>
+    <%= f.select :round, soccer_rounds, selected: @volleyball.round, :prompt => "Runde auswählen" %>
+  </div>
+  <div class="field">
+    <%= f.label :group ,"Gruppe" %>
+    <%= f.select :group, available_groups, selected: @volleyball.group, prompt: "Gruppe auswählen" %>
+  </div>
+  <div class="field">
+    <%= f.label :place, "Platz" %>
+    <%= f.select :place, available_places, selected: @volleyball.place, :prompt => "Platz auswählen" %>
+  </div>
+  <div class="field">
+    <%= f.label :startime, "Spielbeginn" %><br />
+    <%= f.datetime_select :startime %>
+  </div>
+  <div class="field">
+    <%= f.label :duration, "Spieldauer" %>
+    <%= f.number_field :duration %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit 'Sichern', class: "btn btn-primary" %>
+  </div>
+<% end %>
