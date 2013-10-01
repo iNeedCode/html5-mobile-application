@@ -1,6 +1,6 @@
-class CreateCrickets < ActiveRecord::Migration
+class CreateInternationalVolleyballs < ActiveRecord::Migration
   def change
-    create_table :crickets do |t|
+    create_table :international_volleyballs do |t|
       t.string :team_a
       t.integer :result_a, default: 0
       t.string :team_b
