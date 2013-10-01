@@ -1,14 +1,15 @@
-<% @header = "Alle Cricketspiele" %>
+<% @header = "Alle Internationale Volleyballspiele" %>
 <p class="notice"></p>
 <% if current_user -%>
-    <%= link_to 'Cricketspiel anlegen', new_cricket_path, class: "btn btn-large btn-primary btn-block" %><br>
+    <%= link_to 'Internationales Volleyballspiel anlegen', new_international_volleyball_path, class: "btn btn-large btn-primary btn-block" %><br>
 <% end -%>
 <div class="table-responsve">
 
-<% for i in 0...@crickets.size %>
-<% _cur = @crickets[i] %>
-<% _prev = @crickets[i-1] || @crickets.first %>
-<% _next = @crickets[i+1] || @crickets.last %>
+
+<% for i in 0...@international_volleyballs.size %>
+<% _cur = @international_volleyballs[i] %>
+<% _prev = @international_volleyballs[i-1] || @international_volleyballs.first %>
+<% _next = @international_volleyballs[i+1] || @international_volleyballs.last %>
 
     <% unless _cur.startime.strftime("%d.%m.%Y")==_prev.startime.strftime("%d.%m.%Y") and _cur.round == _prev.round -%>
         <table class="table table-bordered">
@@ -28,7 +29,7 @@
                 <td rowspan="2" class="center"><%= _cur.place %></td>
                 <% if current_user -%>
                     <td rowspan="2" class="center"><%= link_to 'Show', _cur, class: "label label-info" %></td>
-                    <td rowspan="2" class="center"><%= link_to 'Edit', edit_cricket_path(_cur), class: "label label-info" %></td>
+                    <td rowspan="2" class="center"><%= link_to 'Edit', edit_international_volleyball_path(_cur), class: "label label-info" %></td>
                     <td rowspan="2" class="center"><%= link_to 'Del', _cur, method: :delete, data: { confirm: 'Bist du sicher?' }, class: "label label-danger" %></td>
                 <% end -%>
             </tr>

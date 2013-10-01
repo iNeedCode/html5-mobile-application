@@ -1,4 +1,7 @@
 Ijtema::Application.routes.draw do
+  resources :international_volleyballs
+
+
   resources :volleyballs
 
 

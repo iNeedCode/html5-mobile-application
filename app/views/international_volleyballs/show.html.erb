@@ -1,0 +1,34 @@
+<% @header = "Spiel #{@international_volleyball.team_a} vs. #{@international_volleyball.team_b}" %>
+
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Spiel: </b>
+  <%= @international_volleyball.team_a %> vs.
+  <%= @international_volleyball.team_b %>
+</p>
+
+<p>
+  <b>Round:</b>
+  <%= @international_volleyball.round %>
+</p>
+
+<p>
+  <b>Group:</b>
+  <%= @international_volleyball.group %>
+</p>
+
+<p>
+  <b>Place:</b>
+  <%= @international_volleyball.place %>
+</p>
+
+<p>
+  <b>Beginn</b>
+  <%= @international_volleyball.startime.strftime("%d.%m.%Y - %H:%M") %> <br>
+  <b>Spieldauer:</b>
+  <%= @international_volleyball.duration %>
+</p>
+
+<%= link_to 'Edit', edit_international_volleyball_path(@international_volleyball), class: "btn btn-default" %>
+<%= link_to 'Back', international_volleyballs_path, class: "btn btn-default" %>
