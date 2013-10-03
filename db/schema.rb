@@ -13,6 +13,7 @@
 
 ActiveRecord::Schema.define(:version => 20131003125601) do
 
+
   create_table "basketballs", :force => true do |t|
     t.string   "team_a"
     t.integer  "result_a"
