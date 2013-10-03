@@ -1,0 +1,14 @@
+<% @header = "#{@game.title}" %>
+
+<p id="notice"><%= notice %></p>
+
+<p>
+	<%= raw @game.description %>
+</p>
+
+
+<% if current_user %>
+	<%= link_to 'Edit', edit_game_path(@game), class: "btn btn-default"  %>
+	<%= link_to 'Back', games_path, class: "btn btn-default"  %>	
+<% end %>
+

@@ -9,6 +9,7 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *
  *= require_self
+ *= require bootstrap-wysihtml5
  *= require_tree .
  */
 
@@ -27,4 +28,15 @@ th.center{
 
 div .field {
 	margin: 7px 0px;
+}
+
+/*
+*	--------------
+*  wysihtml5
+*	--------------
+*/
+
+#wysihtml5-textarea {
+	// min-width: 400px;
+	max-width: 580px;
 }
