@@ -1,0 +1,25 @@
+<% @header = "Alle Wissenswettbewerbe" %>
+
+<% if current_user -%>
+    <%= link_to 'Neue Wissenswettbewerb anlegen', new_competition_path, class: "btn btn-large btn-primary btn-block" %><br>
+<% end -%>
+
+<div class="table-responsve">
+<table class="table table-bordered">
+  <tr class="active">
+    <th>Title</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @competitions.each do |competition| %>
+  <tr>
+    <td><%= competition.title %></td>
+    <td><%= link_to 'Show', competition, class: "label label-info" %></td>
+    <td><%= link_to 'Edit', edit_competition_path(competition), class: "label label-info" %></td>
+    <td><%= link_to 'Destroy', competition, method: :delete, data: { confirm: 'Are you sure?' }, class: "label label-danger" %></td>
+  </tr>
+<% end %>
+</table>
+</div>

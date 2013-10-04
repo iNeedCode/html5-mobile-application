@@ -1,27 +1,32 @@
 <% @header = "Wissenswettbewerbe" %>
 
-<div>
-	<div class="box pull-left">
-		<%= link_to("dd", '#' ) %> <br>
-		<span>Fu&szlig;ball</span>
-	</div>	
-
-	<span class="clearfix"></span>
-	<hr>
-
-	<div class="box pull-left">
-		<%= link_to(image_tag("table-tennis.svg", class: "img-thumbnail"), '#' ) %> <br>
-		<span>Tischtennis</span>
-	</div>
-
-	<span class="clearfix"></span>
-	<hr>	
-
-	<div class="box pull-left">
-		<%= link_to(image_tag("swimming.svg", class: "img-thumbnail"), '#' ) %> <br>
-		<span>Schwimmen</span>
-	</div>
-
-
-
+<div class="table-responsve">
+	<table class="table table-striped">
+		<tr>
+			<td><%= image_tag("trophy.svg", class: "img-thumbnail trophy") %></td>
+			<td class="center"><h4><%= link_to( 'Hifz-e-Quran' , controller: "competitions", action: "show", id: "Hifz-e-Quran" ) %></h4></td>
+		</tr>
+		<tr>
+			<td><%= image_tag("trophy.svg", class: "img-thumbnail trophy") %></td>
+			<td class="center"><h4><%= link_to( 'Tarjuma-tul-Quran' , controller: "competitions", action: "show", id: "Tarjuma-tul-Quran" ) %></h4></td>
+		</tr>
+		<tr>
+			<td><%= image_tag("trophy.svg", class: "img-thumbnail trophy") %></td>
+			<td class="center"><h4><%= link_to( 'Azan' , controller: "competitions", action: "show", id: "Azan" ) %></h4></td>
+		</tr>
+		<tr>
+			<td><%= image_tag("trophy.svg", class: "img-thumbnail trophy") %></td>
+			<td class="center"><h4><%= link_to( 'Spontan Rede' , controller: "competitions", action: "show", id: "Spontan Rede" ) %></h4></td>
+		</tr>
+		<tr>
+			<td><%= image_tag("trophy.svg", class: "img-thumbnail trophy") %></td>
+			<td class="center"><h4><%= link_to( 'Mushahida Moaina' , controller: "competitions", action: "show", id: "Mushahida Moaina" ) %></h4></td>
+		</tr>
+		<tr>
+			<td><%= image_tag("trophy.svg", class: "img-thumbnail trophy") %></td>
+			<td class="center"><h4><%= link_to( 'Zentral Prüfung' , controller: "competitions", action: "show", id: "Zentral Pruefung" ) %></h4></td>
+		</tr>
+										
+		
+	</table>
 </div>

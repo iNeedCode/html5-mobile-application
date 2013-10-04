@@ -11,37 +11,43 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131003125601) do
-
+ActiveRecord::Schema.define(:version => 20131004163928) do
 
   create_table "basketballs", :force => true do |t|
     t.string   "team_a"
-    t.integer  "result_a"
+    t.integer  "result_a",   :default => 0
     t.string   "team_b"
-    t.integer  "result_b"
+    t.integer  "result_b",   :default => 0
     t.string   "round"
     t.string   "group"
     t.string   "place"
     t.integer  "duration"
     t.datetime "startime"
     t.datetime "endtime"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",                :null => false
+    t.datetime "updated_at",                :null => false
+  end
+
+  create_table "competitions", :force => true do |t|
+    t.string   "title"
+    t.text     "description"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
   end
 
   create_table "crickets", :force => true do |t|
     t.string   "team_a"
-    t.integer  "result_a"
+    t.integer  "result_a",   :default => 0
     t.string   "team_b"
-    t.integer  "result_b"
+    t.integer  "result_b",   :default => 0
     t.string   "round"
     t.string   "group"
     t.string   "place"
     t.integer  "duration"
     t.datetime "startime"
     t.datetime "endtime"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",                :null => false
+    t.datetime "updated_at",                :null => false
   end
 
   create_table "games", :force => true do |t|
@@ -109,17 +115,17 @@ ActiveRecord::Schema.define(:version => 20131003125601) do
 
   create_table "volleyballs", :force => true do |t|
     t.string   "team_a"
-    t.integer  "result_a"
+    t.integer  "result_a",   :default => 0
     t.string   "team_b"
-    t.integer  "result_b"
+    t.integer  "result_b",   :default => 0
     t.string   "round"
     t.string   "group"
     t.string   "place"
     t.integer  "duration"
     t.datetime "startime"
     t.datetime "endtime"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",                :null => false
+    t.datetime "updated_at",                :null => false
   end
 
 end

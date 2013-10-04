@@ -1,12 +1,12 @@
 <% @header = "Alle Beschreibungen der Spiele" %>
 
-
 <% if current_user -%>
     <%= link_to 'Neue Spielart anlegen', new_game_path, class: "btn btn-large btn-primary btn-block" %><br>
 <% end -%>
 
-<table>
-  <tr>
+<div class="table-responsve">
+<table class="table table-bordered">
+  <tr class="active">
     <th>Title</th>
     <th></th>
     <th></th>
@@ -16,9 +16,9 @@
 <% @games.each do |game| %>
   <tr>
     <td><%= game.title %></td>
-    <td><%= link_to 'Show', game %></td>
-    <td><%= link_to 'Edit', edit_game_path(game) %></td>
-    <td><%= link_to 'Destroy', game, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><%= link_to 'Show', game, class: "label label-info" %></td>
+    <td><%= link_to 'Edit', edit_game_path(game), class: "label label-info" %></td>
+    <td><%= link_to 'Destroy', game, method: :delete, data: { confirm: 'Are you sure?' }, class: "label label-danger" %></td>
   </tr>
 <% end %>
 </table>
