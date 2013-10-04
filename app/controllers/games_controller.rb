@@ -13,7 +13,7 @@ class GamesController < ApplicationController
   # GET /games/1
   # GET /games/1.json
   def show
-    @game = Game.find(params[:id])
+    @game = Game.find_by_id_or_title(params[:id])
 
     respond_to do |format|
       format.html # show.html.erb

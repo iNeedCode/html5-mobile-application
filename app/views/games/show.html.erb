@@ -6,6 +6,9 @@
 	<%= raw @game.description %>
 </p>
 
+<p class="text-center">
+	<em>zuletzt ge&auml;ndert: <%= @game.updated_at.strftime("%d.%m.%Y um %H:%M") %></em>
+</p>
 
 <% if current_user %>
 	<%= link_to 'Edit', edit_game_path(@game), class: "btn btn-default"  %>

@@ -2,10 +2,10 @@ class PagesController < ApplicationController
   def home
   end
 
-  def games
+  def all_games
   end
 
-  def competition
+  def all_competition
   end
 
 end
