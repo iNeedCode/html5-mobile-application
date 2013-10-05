@@ -2,9 +2,11 @@
 
 <p id="notice"><%= notice %></p>
 
-<p>
-	<%= raw @game.description %>
-</p>
+<div class="description">
+	<p>
+		<%= raw @game.description %>
+	</p>
+</div>
 
 <p class="text-center">
 	<em>zuletzt ge&auml;ndert: <%= @game.updated_at.strftime("%d.%m.%Y um %H:%M") %></em>
