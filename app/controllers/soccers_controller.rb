@@ -6,6 +6,7 @@ class SoccersController < ApplicationController
 
     respond_to do |format|
       format.html # index.html.erb
+      format.csv { send_data(@soccers.to_csv) }
       format.json { render json: @soccers }
     end
   end

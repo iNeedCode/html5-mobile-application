@@ -2,6 +2,7 @@
 
 <% if current_user -%>
     <%= link_to 'Spiel eintragen', new_soccer_path, class: "btn btn-large btn-primary btn-block" %><br>
+    <p>Dowload: <%= link_to "CSV", soccers_path(format: "csv") %></p>
 <% end -%>
 <div class="table-responsve">
 
