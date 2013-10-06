@@ -1,0 +1,40 @@
+<% @header = "Programmübersicht" %>
+
+<% if current_user -%>
+    <%= link_to 'Programm anlegen', new_event_path, class: "btn btn-large btn-primary btn-block" %><br>
+<% end -%>
+
+<% for i in 0...@events.size %>
+
+  <% _cur = @events[i] %>
+  <% _prev = @events[i-1] || @events.first %>
+  <% _next = @events[i+1] || @events.last %>
+
+
+<% unless _cur.startime.strftime("%d.%m.%Y")==_prev.startime.strftime("%d.%m.%Y") %>
+  <table class="table table-bordered">
+    <strong><%= _cur.startime.strftime("%d.%m.%Y") %></strong>
+    <tr class="active"><th>Uhrzeit<th>Programm</th><th class="center">Ort</th>
+    <% if current_user -%>
+      <th></th><th></th><th></th>
+    <% end -%>
+    </tr>
+<% end %>
+
+    <tr class="time" data-time="<%= _cur.startime.strftime("%d%m%Y%H%M%S") %>">
+      <td><%= _cur.startime.strftime("%H:%M") %> - <%= _cur.endtime.strftime("%H:%M") %></td>
+      <td><%= _cur.title %></td>
+      <td><%= _cur.place %></td>
+      <% if current_user %>
+        <td><%= link_to 'Show', _cur %></td>
+        <td><%= link_to 'Edit', edit_event_path(_cur) %></td>
+        <td><%= link_to 'Destroy', _cur, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      <% end %>
+    </tr>
+
+
+<% unless _cur.startime.strftime("%d.%m.%Y")==_next.startime.strftime("%d.%m.%Y") -%>
+  </table>
+<% end -%>
+<% end -%>
+

@@ -1,0 +1,26 @@
+<% @header = "Programm: #{@event.title}" %>
+<p id="notice"><%= notice %></p>
+
+
+  <h3><%= @event.title %></h3>
+  
+
+
+<p>
+  <b>Place:</b>
+  <%= @event.place %>
+</p>
+
+<p>
+  <b>Beginn:</b>
+  <%= @event.startime.strftime("%d.%m.%Y - %H:%M") %>
+</p>
+
+<p>
+  <b>Ende:</b>
+  <%= @event.endtime.strftime("%d.%m.%Y - %H:%M") %>
+</p>
+
+
+<%= link_to 'Edit', edit_event_path(@event) %> |
+<%= link_to 'Back', events_path %>

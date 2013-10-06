@@ -1,4 +1,7 @@
 Ijtema::Application.routes.draw do
+  resources :events
+
+
   resources :competitions
 
 
