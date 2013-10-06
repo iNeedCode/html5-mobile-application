@@ -35,6 +35,7 @@ gem 'anjlab-bootstrap-rails', :require => 'bootstrap-rails',
 gem 'rails_12factor'
 gem 'bootstrap-wysihtml5-rails'
 gem 'to_csv-rails'
+gem 'smarter_csv'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
