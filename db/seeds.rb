@@ -24,3 +24,5 @@ Competition.create(title: 'Azan', description: 'Beschreibung')
 Competition.create(title: 'Spontan Rede', description: 'Beschreibung')
 Competition.create(title: 'Mushahida Moaina', description: 'Beschreibung')
 Competition.create(title: 'Zentral Pruefung', description: 'Beschreibung')
+
+User.create(email: 'a@gmx.de', password: '12345678', password_confirmation: '12345678' )
