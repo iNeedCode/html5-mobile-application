@@ -1,5 +1,7 @@
 Ijtema::Application.routes.draw do
-  resources :events
+  resources :events do
+    collection { post :import }
+  end
 
 
   resources :competitions

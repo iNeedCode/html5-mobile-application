@@ -6,6 +6,7 @@ class EventsController < ApplicationController
 
     respond_to do |format|
       format.html # index.html.erb
+      format.csv { send_data(@events.to_csv(:except => [:created_at, :updated_at])) }
       format.json { render json: @events }
     end
   end
@@ -79,5 +80,10 @@ class EventsController < ApplicationController
       format.html { redirect_to events_url }
       format.json { head :no_content }
     end
+  end
+
+  def import
+    Event.import(params[:file])
+    redirect_to events_url, notice: "Programm importiert"
   end
 end

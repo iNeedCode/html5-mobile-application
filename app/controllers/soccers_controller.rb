@@ -87,7 +87,7 @@ class SoccersController < ApplicationController
 
   def import
     Soccer.import(params[:file])
-    redirect_to soccers_url, notice: "Fussballspiel importiert"
+    redirect_to soccers_url, notice: "Fussballspiele importiert"
   end
 
 end

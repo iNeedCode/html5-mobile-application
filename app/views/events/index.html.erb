@@ -2,6 +2,13 @@
 
 <% if current_user -%>
     <%= link_to 'Programm anlegen', new_event_path, class: "btn btn-large btn-primary btn-block" %><br>
+    <p>Dowload: <%= link_to "CSV", events_path(format: "csv") %></p>
+    <p>
+      <%= form_tag import_events_path, multipart: true do %>
+      <%= file_field_tag :file %>
+      <%= submit_tag "importieren" %>
+    <% end %>
+    </p>
 <% end -%>
 
 <% for i in 0...@events.size %>
@@ -26,9 +33,9 @@
       <td><%= _cur.title %></td>
       <td><%= _cur.place %></td>
       <% if current_user %>
-        <td><%= link_to 'Show', _cur %></td>
-        <td><%= link_to 'Edit', edit_event_path(_cur) %></td>
-        <td><%= link_to 'Destroy', _cur, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', _cur, class: "label label-info" %></td>
+        <td><%= link_to 'Edit', edit_event_path(_cur), class: "label label-info" %></td>
+        <td><%= link_to 'Destroy', _cur, method: :delete, data: { confirm: 'Are you sure?' }, class: "label label-danger" %></td>
       <% end %>
     </tr>
 
