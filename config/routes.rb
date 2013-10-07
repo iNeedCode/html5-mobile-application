@@ -27,6 +27,7 @@ Ijtema::Application.routes.draw do
   devise_for :users, :path => "auth", :path_names => { :sign_in => 'login', :sign_out => 'logout', :sign_up => 'register'}
 
   get "pages/home"
+  get "twitter", to: "pages#twitter"
   get "all_games", to: 'pages#all_games'
   get "all_competition", to: 'pages#all_competition'
 

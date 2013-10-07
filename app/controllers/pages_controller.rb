@@ -8,4 +8,8 @@ class PagesController < ApplicationController
   def all_competition
   end
 
+  def twitter
+  	
+  end
+
 end
