@@ -1,0 +1,20 @@
+<% @header = "Maps" %>
+
+<!-- http://www.mapbox.com/mapbox.js/api/v1.3.1/ -->
+  <script src='http://api.tiles.mapbox.com/mapbox.js/v1.3.1/mapbox.js'></script>
+  <link href='http://api.tiles.mapbox.com/mapbox.js/v1.3.1/mapbox.css' rel='stylesheet' />
+  <!--[if lte IE 8]>
+    <link href='http://api.tiles.mapbox.com/mapbox.js/v1.3.1/mapbox.ie.css' rel='stylesheet' >
+  <![endif]-->
+  <style>
+    
+    #map { position:absolute; top:50px; bottom:5px; left: 5px; width:100%; }
+  </style>
+<div id='map'></div>
+<script type='text/javascript'>
+var map = L.mapbox.map('map', 'aetbaar444.map-jtwdh1ra')
+				.setView([48.98096338356917, 8.330522775650024], 16);
+</script>
+
+
+

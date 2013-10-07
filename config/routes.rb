@@ -29,6 +29,7 @@ Ijtema::Application.routes.draw do
   get "pages/home"
   get "twitter", to: "pages#twitter"
   get "instagram", to: "pages#instagram"
+  get "maps", to: "pages#maps"
   get "all_games", to: 'pages#all_games'
   get "all_competition", to: 'pages#all_competition'
 

@@ -13,4 +13,7 @@ class PagesController < ApplicationController
 
   def instagram
   end
+
+  def maps  
+  end
 end
