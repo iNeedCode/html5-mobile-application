@@ -9,7 +9,8 @@ class PagesController < ApplicationController
   end
 
   def twitter
-  	
   end
 
+  def instagram
+  end
 end
