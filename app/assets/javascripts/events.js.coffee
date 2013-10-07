@@ -26,6 +26,6 @@ $(document).ready ->
 
 		# console.log "aktuelle Auswahl: " + current
 
-		$('tr[data-time="0' + current + '"]').addClass "success"
+		$('tr[data-time="0' + current + '"]').addClass "success bold"
 
 	current_programm(times)
