@@ -90,8 +90,11 @@ ActiveRecord::Schema.define(:version => 20131006160126) do
   end
 
   create_table "soccers", :force => true do |t|
+    t.string   "game_id"
     t.string   "team_a"
+    t.integer  "result_a",   :default => 0
     t.string   "team_b"
+    t.integer  "result_b",   :default => 0
     t.string   "round"
     t.string   "group"
     t.string   "place"
@@ -100,8 +103,6 @@ ActiveRecord::Schema.define(:version => 20131006160126) do
     t.datetime "endtime"
     t.datetime "created_at",                :null => false
     t.datetime "updated_at",                :null => false
-    t.integer  "result_a",   :default => 0
-    t.integer  "result_b",   :default => 0
   end
 
   create_table "users", :force => true do |t|

@@ -4,18 +4,28 @@
 
 $(document).ready ->
 	now = new Date().toLocaleString().replace(/(\.|:|\s)/g,'')
+	# console.log "Zeit: " + now
 	times = []
 
 	$(".time").each (index) ->
-		times.push parseInt($(this).data("time"))
+		times.push parseFloat($(this).data("time"))
 	
+	# console.log  "alle Zeiten: " + times
 
 	current_programm = (all_times) -> 
 		current = all_times[0]
+		smallest = Math.abs(current-now)
 		for elem in all_times
-			if elem < current
+			if (Math.abs(elem - now ) < smallest)	
+				smallest = Math.abs(elem - now )
+			# console.log "delta: " + delta
+			# console.log "smallest: " + smallest
+			delta = elem - now
+			if delta < smallest
 				current = elem
-		# console.log current
-		$('tr[data-time="' + current + '"]').addClass "success"
+
+		# console.log "aktuelle Auswahl: " + current
+
+		$('tr[data-time="0' + current + '"]').addClass "success"
 
 	current_programm(times)

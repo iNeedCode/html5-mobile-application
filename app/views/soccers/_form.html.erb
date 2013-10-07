@@ -10,6 +10,11 @@
       </ul>
     </div>
   <% end %>
+  
+  <div class="field">
+    <%= f.label :game_id, "Spiel-Nr" %>: 
+    <%= f.text_field :game_id, placeholder: "Spiel-Nr" %>
+  </div>
 
   <div class="field">
     <%= f.text_field :team_a, placeholder: "Mannschaft A" %> : <%= f.text_field :result_a, placeholder: "Tore A", size: 5 %> <br />
@@ -17,7 +22,7 @@
     <%= f.text_field :team_b, placeholder: "Mannschaft B" %> : <%= f.text_field :result_b, placeholder: "Tore B", size: 5 %>
   </div>
   <div class="field">
-    <%= f.label :round, "Gruppe" %>
+    <%= f.label :round, "Runde" %>
     <%= f.select :round, soccer_rounds, selected: @soccer.round, :prompt => "Runde auswählen" %>
   </div>
   <div class="field">
