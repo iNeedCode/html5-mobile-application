@@ -16,4 +16,7 @@ class PagesController < ApplicationController
 
   def maps  
   end
+  
+  def about
+  end
 end
