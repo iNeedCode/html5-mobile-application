@@ -1,19 +1,29 @@
 <% @header = "Herzlich Willkommen" %>
 
-<div id="weather">
+<div class="text-center">
+	<h1>34. Salana Ijtema</h1>
+	<p>Der Majlis Khuddam-ul-Ahmadiyya Deutschland</p>
+	<small>Messeallee 1, 76287 Rheinstetten</small>
+	<%= link_to	'Ijtema Erkunden (Maps)', maps_path, class: "btn btn-primary btn-lg btn-block" %>
+</div>
+<div class="text-center">
+	<h3>Radio</h3>
+	<small>Frequenz: 107,5</small><br>
 
+	<abbr title="Phone">Phonecast:</abbr> <span class="glyphicon-earphone glyphicon"></span> <a href="tel:+496990018494">(069) 90018494</a>
+</div>
+<div class="text-center">
+	<h4>Hotelreservierung</h4>
+	<%= link_to "weitere Informationen...", "http://khuddam.de/hotelreservierung.html" %>
+</div>
+
+<!-- 
+<div id="weather">
 	<ul id="scroller">
 		<p class="location"></p>
-		<!-- The forecast items will go here -->
+		The forecast items will go here
 	</ul>
 
 	<a href="#" class="arrow previous">Previous</a>
 	<a href="#" class="arrow next">Next</a>
-
-
-</div>
-
-
-
-
-
+</div> -->

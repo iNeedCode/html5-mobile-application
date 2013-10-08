@@ -101,4 +101,4 @@ $ ->
 		showSlide currentSlide + 1
 
 
-	locationSuccess()
+	# locationSuccess()
