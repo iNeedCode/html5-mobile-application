@@ -6,7 +6,7 @@
     <p>
     	<%= form_tag import_soccers_path, multipart: true do %>
 		  <%= file_field_tag :file %>
-		  <%= submit_tag "importieren" %>
+		  <%= submit_tag "Importieren", class: "btn btn-default btn-xs btn-primary" %>
 		<% end %>
     </p>
 <% end -%>

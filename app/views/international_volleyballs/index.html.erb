@@ -2,6 +2,13 @@
 <p class="notice"></p>
 <% if current_user -%>
     <%= link_to 'Internationales Volleyballspiel anlegen', new_international_volleyball_path, class: "btn btn-large btn-primary btn-block" %><br>
+    <p>Dowload: <%= link_to "CSV", international_volleyballs_path(format: "csv") %></p>
+    <p>
+        <%= form_tag import_international_volleyballs_path, multipart: true do %>
+          <%= file_field_tag :file %>
+          <%= submit_tag "Importieren", class: "btn btn-default btn-xs btn-primary" %>
+        <% end %>
+    </p>    
 <% end -%>
 <div class="table-responsve">
 

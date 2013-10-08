@@ -1,31 +1,30 @@
 Ijtema::Application.routes.draw do
+  
+  resources :competitions
+  resources :games
+
   resources :atfal_events do
     collection { post :import }
   end
-
   resources :events do
     collection { post :import }
   end
-
-
-  resources :competitions
-
-
-  resources :games
-
-  resources :international_volleyballs
-
-
-  resources :volleyballs
-
-
-  resources :basketballs
-
-
-  resources :crickets
+  resources :international_volleyballs do
+    collection { post :import }
+  end
+  resources :volleyballs do
+    collection { post :import }
+  end
+  resources :basketballs do
+    collection { post :import }
+  end
+  resources :crickets do
+    collection { post :import }
+  end
   resources :soccers do
     collection { post :import }
   end
+
   resources :players
 
   devise_for :users, :path => "auth", :path_names => { :sign_in => 'login', :sign_out => 'logout', :sign_up => 'register'}

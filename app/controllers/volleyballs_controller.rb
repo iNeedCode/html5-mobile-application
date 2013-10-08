@@ -6,6 +6,7 @@ class VolleyballsController < ApplicationController
 
     respond_to do |format|
       format.html # index.html.erb
+      format.csv { send_data(@volleyballs.to_csv(:except => [:created_at, :updated_at])) }
       format.json { render json: @volleyballs }
     end
   end
@@ -81,5 +82,10 @@ class VolleyballsController < ApplicationController
       format.html { redirect_to volleyballs_url }
       format.json { head :no_content }
     end
+  end
+
+  def import
+    Volleyball.import(params[:file])
+    redirect_to volleyballs_url, notice: "Volleyballspiele importiert"
   end
 end
