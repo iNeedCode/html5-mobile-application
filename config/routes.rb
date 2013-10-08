@@ -1,4 +1,8 @@
 Ijtema::Application.routes.draw do
+  resources :atfal_events do
+    collection { post :import }
+  end
+
   resources :events do
     collection { post :import }
   end

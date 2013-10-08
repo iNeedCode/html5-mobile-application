@@ -1,0 +1,46 @@
+<% @header = "Atfal Programmübersicht" %>
+
+<% if current_user -%>
+    <%= link_to 'Atfal Programm anlegen', new_atfal_event_path, class: "btn btn-large btn-primary btn-block" %><br>
+    <p>Dowload: <%= link_to "CSV", atfal_events_path(format: "csv") %></p>
+    <p>
+      <%= form_tag import_atfal_events_path, multipart: true do %>
+      <%= file_field_tag :file %>
+      <%= submit_tag "importieren", class: "btn btn-default btn-xs btn-primary" %>
+    <% end %>
+    </p>
+<% end -%>
+
+<% for i in 0...@atfal_events.size %>
+
+  <% _cur = @atfal_events[i] %>
+  <% _prev = @atfal_events[i-1] || @atfal_events.first %>
+  <% _next = @atfal_events[i+1] || @atfal_events.last %>
+
+
+<% unless _cur.startime.strftime("%d.%m.%Y")==_prev.startime.strftime("%d.%m.%Y") %>
+  <table class="table table-bordered">
+    <strong><%= _cur.startime.strftime("%d.%m.%Y") %></strong>
+    <tr class="active"><th>Uhrzeit<th>Programm</th><th class="center">Ort</th>
+    <% if current_user -%>
+      <th></th><th></th><th></th>
+    <% end -%>
+    </tr>
+<% end %>
+
+    <tr class="time" data-time="<%= _cur.startime.strftime("%d%m%Y%H%M%S") %>">
+      <td><%= _cur.startime.strftime("%H:%M") %> - <%= _cur.endtime.strftime("%H:%M") %></td>
+      <td><%= _cur.title %></td>
+      <td><%= _cur.place %></td>
+      <% if current_user %>
+        <td><%= link_to 'Show', _cur, class: "label label-info" %></td>
+        <td><%= link_to 'Edit', edit_event_path(_cur), class: "label label-info" %></td>
+        <td><%= link_to 'Destroy', _cur, method: :delete, data: { confirm: 'Are you sure?' }, class: "label label-danger" %></td>
+      <% end %>
+    </tr>
+
+
+<% unless _cur.startime.strftime("%d.%m.%Y")==_next.startime.strftime("%d.%m.%Y") -%>
+  </table>
+<% end -%>
+<% end -%>

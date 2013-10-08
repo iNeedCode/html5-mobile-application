@@ -1,0 +1,26 @@
+<% @header = "Programm: #{@atfal_event.title}" %>
+<p id="notice"><%= notice %></p>
+
+
+  <h3><%= @atfal_event.title %></h3>
+  
+
+
+<p>
+  <b>Place:</b>
+  <%= @atfal_event.place %>
+</p>
+
+<p>
+  <b>Beginn:</b>
+  <%= @atfal_event.startime.strftime("%d.%m.%Y - %H:%M") %>
+</p>
+
+<p>
+  <b>Ende:</b>
+  <%= @atfal_event.endtime.strftime("%d.%m.%Y - %H:%M") %>
+</p>
+
+
+<%= link_to 'Edit', edit_atfal_event_path(@atfal_event), class: "btn btn-default" %>
+<%= link_to 'Back', atfal_events_path, class: "btn btn-default" %>

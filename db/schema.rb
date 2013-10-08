@@ -11,7 +11,16 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131006160126) do
+ActiveRecord::Schema.define(:version => 20131008141009) do
+
+  create_table "atfal_events", :force => true do |t|
+    t.string   "title"
+    t.string   "place"
+    t.datetime "startime"
+    t.datetime "endtime"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "basketballs", :force => true do |t|
     t.string   "team_a"

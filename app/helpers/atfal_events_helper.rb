@@ -1,0 +1,2 @@
+module AtfalEventsHelper
+end
