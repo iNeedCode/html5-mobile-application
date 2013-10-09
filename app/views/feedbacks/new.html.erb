@@ -1,0 +1,9 @@
+<% @header = "App Feedback" %>
+
+<%= render 'form' %>
+
+<br>
+<% if current_user %>
+	<%= link_to 'Back', feedbacks_path, class: "btn btn-default" %>
+<% end %>
+

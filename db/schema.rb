@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131008141009) do
+ActiveRecord::Schema.define(:version => 20131009160701) do
 
   create_table "atfal_events", :force => true do |t|
     t.string   "title"
@@ -64,6 +64,13 @@ ActiveRecord::Schema.define(:version => 20131008141009) do
     t.string   "place"
     t.datetime "startime"
     t.datetime "endtime"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "feedbacks", :force => true do |t|
+    t.text     "comment"
+    t.string   "rating"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end

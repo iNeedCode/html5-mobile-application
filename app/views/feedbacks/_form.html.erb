@@ -1,0 +1,38 @@
+<%= form_for(@feedback) do |f| %>
+  <% if @feedback.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@feedback.errors.count, "error") %> prohibited this feedback from being saved:</h2>
+
+      <ul>
+      <% @feedback.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.text_area :comment, id: "wysihtml5-textarea", class: "form-control", placeholder: "Enter text ..." %>
+  </div>
+  <div class="field">
+    <%= f.label :rating, "Bewertung" %>:
+    <% (1..5).to_a.each do |number| %>
+      <%= "#{number}:  " %><%= f.radio_button :rating, number %>
+    <% end -%>
+    <br>
+    <em class="small">1: sehr gut - 5: mangelhaft</em>
+  </div>
+  <div class="actions">
+    <%= f.submit 'Abschicken', class: "btn btn-primary" %>
+  </div>
+<% end %>
+
+<script type="text/javascript">
+  $(document).ready(function(){
+
+    $('#wysihtml5-textarea').each(function(i, elem) {
+      $(elem).wysihtml5();
+    });
+
+  })
+</script>

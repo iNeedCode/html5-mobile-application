@@ -1,5 +1,8 @@
 Ijtema::Application.routes.draw do
   
+  resources :feedbacks
+
+
   resources :competitions
   resources :games
 
