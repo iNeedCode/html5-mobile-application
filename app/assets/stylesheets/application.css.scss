@@ -9,12 +9,13 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *
  *= require_self
+ *= require twitter/bootstrap
  *= require bootstrap-wysihtml5
  *= require_tree .
  */
 
 // import original bootstrap
-@import "twitter/bootstrap";
+// @import "twitter/bootstrap";
 
 #toolbar h1{margin-top: 10px}
 td.center{

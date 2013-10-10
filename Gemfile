@@ -30,8 +30,7 @@ gem 'jquery-rails'
 # gem 'anjlab-bootstrap-rails', '>= 3.0.0.0', :require => 'bootstrap-rails'
 gem 'momentjs-rails'
 gem 'devise'
-gem 'anjlab-bootstrap-rails', :require => 'bootstrap-rails',
-                              :github => 'anjlab/bootstrap-rails'
+# gem 'anjlab-bootstrap-rails', :require => 'bootstrap-rails',:github => 'anjlab/bootstrap-rails'
 gem 'rails_12factor'
 gem 'bootstrap-wysihtml5-rails'
 gem 'to_csv-rails'
@@ -45,9 +44,11 @@ gem 'smarter_csv'
 
 # Use unicorn as the app server
 gem 'unicorn'
+gem 'mysql2'
+gem 'bootstrap-sass-rails'
 
 # Deploy with Capistrano
-gem 'capistrano', '2.11.2'
+# gem 'capistrano', '2.11.2'
 
 # To use debugger
 # gem 'debugger'
