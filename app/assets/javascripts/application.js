@@ -13,7 +13,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require moment
-//= require twitter/bootstrap
+//= require bootstrap
 //= require bootstrap-wysihtml5/b3
 //= require_tree .
 

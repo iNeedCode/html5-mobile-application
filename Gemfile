@@ -45,7 +45,7 @@ gem 'smarter_csv'
 # Use unicorn as the app server
 gem 'unicorn'
 gem 'mysql2'
-gem 'bootstrap-sass-rails'
+#gem 'bootstrap-sass-rails'
 
 # Deploy with Capistrano
 # gem 'capistrano', '2.11.2'

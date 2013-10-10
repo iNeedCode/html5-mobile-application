@@ -64,5 +64,7 @@ module Ijtema
     # Devise
     # If you are deploying on Heroku with Rails 3.2 only, you may want to set:
     config.assets.initialize_on_precompile = false
+
+    config.assets.paths << "#{Rails}/vendor/assets/fonts"
   end
 end
