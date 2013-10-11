@@ -32,7 +32,7 @@
                 </td>
                 <td><%= _cur.team_a %></td>
                 <td class="center"><%= _cur.result_a %></td>
-                <td rowspan="2" class="center"><%= _cur.place %></td>
+                <td rowspan="2" class="center"><%= "#{_cur.place} (#{_cur.game_id})" %></td>
                 <% if current_user -%>
                     <td rowspan="2" class="center"><%= link_to 'Show', _cur, class: "label label-info" %></td>
                     <td rowspan="2" class="center"><%= link_to 'Edit', edit_cricket_path(_cur), class: "label label-info" %></td>

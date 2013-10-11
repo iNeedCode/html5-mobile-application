@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131009160701) do
+ActiveRecord::Schema.define(:version => 20131011113146) do
 
   create_table "atfal_events", :force => true do |t|
     t.string   "title"
@@ -35,6 +35,7 @@ ActiveRecord::Schema.define(:version => 20131009160701) do
     t.datetime "endtime"
     t.datetime "created_at",                :null => false
     t.datetime "updated_at",                :null => false
+    t.string   "game_id"
   end
 
   create_table "competitions", :force => true do |t|
@@ -57,6 +58,7 @@ ActiveRecord::Schema.define(:version => 20131009160701) do
     t.datetime "endtime"
     t.datetime "created_at",                :null => false
     t.datetime "updated_at",                :null => false
+    t.string   "game_id"
   end
 
   create_table "events", :force => true do |t|
@@ -95,6 +97,7 @@ ActiveRecord::Schema.define(:version => 20131009160701) do
     t.datetime "endtime"
     t.datetime "created_at",                :null => false
     t.datetime "updated_at",                :null => false
+    t.string   "game_id"
   end
 
   create_table "players", :force => true do |t|
@@ -152,6 +155,7 @@ ActiveRecord::Schema.define(:version => 20131009160701) do
     t.datetime "endtime"
     t.datetime "created_at",                :null => false
     t.datetime "updated_at",                :null => false
+    t.string   "game_id"
   end
 
 end

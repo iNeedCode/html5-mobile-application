@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 require 'smarter_csv'
 class Basketball < ActiveRecord::Base
-  attr_accessible :duration, :endtime, :group, :place, :result_a, :result_b, :round, :startime, :team_a, :team_b
+  attr_accessible :duration, :endtime, :game_id, :group, :place, :result_a, :result_b, :round, :startime, :team_a, :team_b
 
   def self.import(file)
   	result = SmarterCSV.process(file.path)

@@ -10,6 +10,12 @@
       </ul>
     </div>
   <% end %>
+
+  <div class="field">
+    <%= f.label :game_id, "Spiel-Nr" %>: 
+    <%= f.text_field :game_id, placeholder: "Spiel-Nr" %>
+  </div>
+      
   <div class="field">
     <%= f.text_field :team_a, placeholder: "Mannschaft A" %> : <%= f.text_field :result_a, placeholder: "Points A", size: 5 %> <br />
     <b>vs.</b><br />
