@@ -14,7 +14,7 @@ class ApplicationController < ActionController::Base
 	end
 
 	def available_places
-		available_places = ["Fußball A", "Fußball B", "Cricket A", "Cricket B"]
+		available_places = ["Fußball A", "Fußball B", "Cricket A", "Cricket B", "Cricket C", "Basketball A"]
 	end
 
 	def available_groups
