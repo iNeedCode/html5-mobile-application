@@ -24,7 +24,7 @@ class ApplicationController < ActionController::Base
 
   def default_url_options
     if Rails.env.production?
-      {:host => "www.app.codeshifter.de"}
+      {:host => "37.221.168.115:8080"}
     else  
       {}
     end
