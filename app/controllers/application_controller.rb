@@ -22,4 +22,12 @@ class ApplicationController < ActionController::Base
 		groups.to_a
 	end
 
+  def default_url_options
+    if Rails.env.production?
+      {:host => "www.app.codeshifter.de"}
+    else  
+      {}
+    end
+  end
+
 end
