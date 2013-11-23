@@ -1,14 +1,25 @@
-### Ijtema Webapplikation
+### HTML5 mobile application
 ---
-Beta verison
+The following project was built to to cover an event with round about 4000 people in the year 2013. The purpose of this application was to distribute information and reach out to every guest with a Smartphone (IOS, Android, etc.).
 
-* [datepicker](https://github.com/anjlab/anjlab-widgets)
-* [Twitter Bootstrap v3.0.0 for Rails 3](https://github.com/anjlab/bootstrap-rails)
-* [WYSIHTML5 Editor](https://github.com/Nerian/bootstrap-wysihtml5-rails)
+It was built was built with Ruby on Rails and an awesome front-end library called [Snap.js][1] which comes very handy for the native experience and the swiping menu to right.
 
+#### Screenshots
 
----
-**Devise**  
-You can copy Devise views (for customization) to your app by running:
+[![d](http://gifmaker.me/files/download/home/20131123/16/OKC0LF0xTGwB5uwtdhTVnE/bildschirmfoto_bpwXx.png)]
 
-	rails g devise:views
+### Getting Started
+If you want to play around the this project, then follow these steps:
+
+```
+$ bundle install 
+$ rake db:seed
+```
+
+Use the admin features over the the following relative url path `/auth/login`. Credentials are Email: `a@gmx.de` and password `12345678`
+
+#### Template
+If you want to start right away with the mentioned Snap.js library and Ruby on Rails, then consider this [template][2].
+
+[1]: https://github.com/jakiestfu/Snap.js
+[2]: https://github.com/codeshifter/SnapJsRailsTemplate
