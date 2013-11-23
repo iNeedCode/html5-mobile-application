@@ -6,7 +6,7 @@ It was built was built with Ruby on Rails and an awesome front-end library calle
 
 #### Screenshots
 
-[![d](http://gifmaker.me/files/download/home/20131123/16/OKC0LF0xTGwB5uwtdhTVnE/bildschirmfoto_bpwXx.png)]
+[![screenshot](https://raw.github.com/iNeedCode/ijtema/master/screenshot.gif?token=566286__eyJzY29wZSI6IlJhd0Jsb2I6aU5lZWRDb2RlL2lqdGVtYS9tYXN0ZXIvc2NyZWVuc2hvdC5naWYiLCJleHBpcmVzIjoxMzg1ODQ4NDg5fQ%3D%3D--d7c58b2ba0a560db08c5069fb78728f1ef20e343)]
 
 ### Getting Started
 If you want to play around the this project, then follow these steps:
